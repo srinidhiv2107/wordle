@@ -1,0 +1,125 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    align-items: baseline;
+    justify-content: flex-start;
+    width: 95%;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+.modal-header p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.statistics {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat p {
+    margin: 0;
+}
+
+.guess-distribution {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.guess-bar {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.guess-number {
+    width: 20px;
+    text-align: center;
+}
+
+.guess-bar .bar {
+    background-color: #ccc;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: black;
+    padding: 0 7px 0 0;
+    border-radius: 0 5px 5px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    animation: grow 450ms ease-in-out;
+    transform-origin: left;
+}
+
+@keyframes grow {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+
+.guess-bar .bar p {
+    margin: 0;
+    font-size: 12px;
+}

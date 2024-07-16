@@ -1,0 +1,68 @@
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(20, minmax(auto, 1.25em));
+    grid-auto-rows: 3em;
+    gap: .25em;
+    justify-content: center;
+}
+
+.key {
+    font-size: inherit;
+    grid-column: span 2;
+    border: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    background-color: hsl(
+        var(--hue, 214),
+        var(--saturation, 8.6%),
+        calc(var(--lightness-offset, 0%) + var(--lightness, 84%))
+    );
+    color: black;
+    fill: white;
+    border-radius: .25em;
+    cursor: pointer;
+    user-select: none;
+}
+
+.key.large {
+    grid-column: span 3;
+}
+
+.key i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75em;
+    height: 1.75em;
+    font-size: 35px;
+}
+
+.key:hover {
+    --lightness-offset: 7%;
+}
+
+.key:focus {
+    --lightness-offset: 10%;
+}
+
+.wrong {
+    --lightness: 30%;
+    color: white;
+}
+
+.wrong-location {
+    --hue: 49;
+    --saturation: 51%;
+    --lightness: 47%;
+    color: white;
+}
+
+.correct {
+    --hue: 115;
+    --saturation: 29%;
+    --lightness: 45%;
+    color: white;
+}

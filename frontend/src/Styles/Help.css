@@ -1,0 +1,81 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+}
+
+.modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-content h2, .modal-content h3 {
+    margin: 0;
+}
+
+.modal-content p:not(:first-child) {
+    margin-top: 2px;
+}
+
+.modal-content .tiles {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.modal-content .tiles .tile {
+    padding: 15px;
+    width: 25px;
+    height: 25px;
+    font-size: 1.2em;
+    font-family: "Poppins", sans-serif;
+    border: .05em solid hsl(216, 8.6%, 84%);
+    border-radius: .15em;
+}
+
+.modal-content .tiles .tile .wrong {
+    color: white;
+    border: none;
+    background-color: hsl(214, 8.6%, 25%);
+}
+
+.modal-content .tiles .tile .wrong-location {
+    color: white;
+    border: none;
+    background-color: hsl(49, 51%, 47%);
+}
+
+.modal-content .tiles .tile .correct {
+    color: white;
+    border: none;
+    background-color: hsl(115, 29%, 45%);
+}
