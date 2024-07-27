@@ -12,6 +12,7 @@ const WelcomePage = () => {
     const intervalId = setInterval(startAnimation, 9000);
 
     return () => clearInterval(intervalId);
+    // eslint-disable-next-line
   }, []);
 
   const setCellRef = (index) => (element) => {

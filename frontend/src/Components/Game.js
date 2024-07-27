@@ -68,6 +68,7 @@ const Game = () => {
     fetchUser();
     const randomWord = targetWords[Math.floor(Math.random() * targetWords.length)];
     setTargetWord(randomWord);
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -84,6 +85,7 @@ const Game = () => {
       if(!isHelpModalOpen && !isStatisticsModalOpen)
         window.removeEventListener('keydown', handleKeyDown);
     };
+    // eslint-disable-next-line
   }, [col, isStatisticsModalOpen, isHelpModalOpen]);
 
   const updateStatsInDB = async (win=false, guessNumber=0) => {
