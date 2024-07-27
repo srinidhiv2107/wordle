@@ -58,7 +58,6 @@ const Game = () => {
         }
         setUser(response.data.username);
         setStats(response.data.statistics);
-        console.log(stats);
       }
       catch(error) {
         console.log("Error fetching user: ", error);
