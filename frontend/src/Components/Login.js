@@ -21,7 +21,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await axios.post('http://localhost:3001/api/auth/login', formData);
+    const res = await axios.post('https://srinidhiv2107-wordle.onrender.com/api/auth/login', formData);
 
     switch(res.data.message) {
       case "invalid-user":

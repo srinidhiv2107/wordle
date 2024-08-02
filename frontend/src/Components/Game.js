@@ -45,7 +45,7 @@ const Game = () => {
         return;
       }
       try {
-        const response = await axios.get("http://localhost:3001/api/auth/user", {
+        const response = await axios.get("https://srinidhiv2107-wordle.onrender.com/api/auth/user", {
           headers: {
             "token": token
           }
@@ -94,7 +94,7 @@ const Game = () => {
       return;
     }
     try {
-      const response = await axios.post("http://localhost:3001/api/auth/user", {
+      const response = await axios.post("https://srinidhiv2107-wordle.onrender.com/api/auth/user", {
         win, guessNumber
       },{
         headers: {

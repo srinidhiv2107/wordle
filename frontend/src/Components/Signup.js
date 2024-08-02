@@ -26,7 +26,7 @@ const Signup = () => {
     else if(formData.password.length < 7)
       showToast("Password should have at least 7 characters");
     else {
-      const res = await axios.post('http://localhost:3001/api/auth/signup', formData);
+      const res = await axios.post('https://srinidhiv2107-wordle.onrender.com/api/auth/signup', formData);
       if(res.data.message === "email-exists")
         showToast("User already exists");
       else if(res.data.message === "username-exists")
